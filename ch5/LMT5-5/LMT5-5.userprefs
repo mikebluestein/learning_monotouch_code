@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="LMT5-5/Main.cs">
+    <Files>
+      <File FileName="LMT5-5/Customer.cs" Line="25" Column="1" />
+      <File FileName="LMT5-5/MainWindow.xib.designer.cs" Line="34" Column="1" />
+      <File FileName="LMT5-5/Main.cs" Line="24" Column="10" />
+      <File FileName="LMT5-5/readme.txt" Line="2" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

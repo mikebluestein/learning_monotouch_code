@@ -1,0 +1,26 @@
+
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMT1-2", "LMT1-2\LMT1-2.csproj", "{00097E1A-7EE2-4251-B507-796D83F22F10}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00097E1A-7EE2-4251-B507-796D83F22F10}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{00097E1A-7EE2-4251-B507-796D83F22F10}.Debug|iPhone.Build.0 = Debug|iPhone
+		{00097E1A-7EE2-4251-B507-796D83F22F10}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{00097E1A-7EE2-4251-B507-796D83F22F10}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{00097E1A-7EE2-4251-B507-796D83F22F10}.Release|iPhone.ActiveCfg = Release|iPhone
+		{00097E1A-7EE2-4251-B507-796D83F22F10}.Release|iPhone.Build.0 = Release|iPhone
+		{00097E1A-7EE2-4251-B507-796D83F22F10}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{00097E1A-7EE2-4251-B507-796D83F22F10}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = LMT1-2\LMT1-2.csproj
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,24 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MTNotes/ColorSelectionController.xib.cs">
+    <Files>
+      <File FileName="MTNotes/NoteDetailControllerIPad.xib.cs" Line="114" Column="1" />
+      <File FileName="MTNotes/NotesTableControllerIPad.cs" Line="17" Column="43" />
+      <File FileName="MTNotes/ColorSelectionController.xib.cs" Line="60" Column="13" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="MTNotes" expanded="True" selected="True">
+            <Node name="ColorSelectionController.xib" expanded="True" />
+            <Node name="NoteDetailControllerIPad.xib" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

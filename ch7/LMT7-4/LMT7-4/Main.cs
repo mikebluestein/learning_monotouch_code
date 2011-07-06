@@ -1,0 +1,46 @@
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using MonoTouch.Foundation;
+using MonoTouch.UIKit;
+
+namespace LMT74
+{
+    public class Application
+    {
+        static void Main (string[] args)
+        {
+            UIApplication.Main (args);
+        }
+    }
+
+    // The name AppDelegate is referenced in the MainWindow.xib file.
+    public partial class AppDelegate : UIApplicationDelegate
+    {
+        // This method is invoked when the application has loaded its UI and its ready to run
+        public override bool FinishedLaunching (UIApplication app, NSDictionary options)
+        {        
+            window.AddSubview (locationTableController.View);
+            
+            window.MakeKeyAndVisible ();
+            
+            return true;
+        }
+        
+        public override void DidEnterBackground (UIApplication application)
+        {
+            LocationHelper.Instance.ClearLocationAdded ();
+            
+            LocationHelper.Instance.LocationAdded += delegate(object sender, LocationEventArgs e) {
+                Console.WriteLine("Location from background: {0}", e.Location.Description());        
+            };
+        }
+
+        // This method is required in iPhoneOS 3.0
+        public override void OnActivated (UIApplication application)
+        {
+        }
+    }
+}
+

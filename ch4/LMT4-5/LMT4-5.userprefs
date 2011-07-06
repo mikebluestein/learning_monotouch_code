@@ -1,0 +1,13 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="LMT4-5/SimpleBrowserController.xib.cs">
+    <Files>
+      <File FileName="LMT4-5/SimpleBrowserController.xib.cs" Line="62" Column="2" />
+      <File FileName="LMT4-5/SimpleBrowserController.xib.designer.cs" Line="104" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

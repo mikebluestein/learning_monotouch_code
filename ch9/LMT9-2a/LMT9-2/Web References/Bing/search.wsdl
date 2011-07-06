@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s0="http://schemas.microsoft.com/LiveSearch/2008/03/Search" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:tns="http://schemas.microsoft.com/LiveSearch/2008/03/Search" targetNamespace="http://schemas.microsoft.com/LiveSearch/2008/03/Search" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/LiveSearch/2008/03/Search" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="SearchRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" default="2.2" name="Version" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Market" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="UILanguage" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Query" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AppId" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Adult" type="tns:AdultOption" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Latitude" type="xs:double" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Longitude" type="xs:double" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Radius" type="xs:double" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Options" type="tns:ArrayOfSearchOption" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Sources" type="tns:ArrayOfSourceType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Web" type="tns:WebRequest" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Image" type="tns:ImageRequest" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Phonebook" type="tns:PhonebookRequest" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Video" type="tns:VideoRequest" />
+          <xs:element minOccurs="0" maxOccurs="1" name="News" type="tns:NewsRequest" />
+          <xs:element minOccurs="0" maxOccurs="1" name="MobileWeb" type="tns:MobileWebRequest" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Translation" type="tns:TranslationRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="AdultOption">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Off" />
+          <xs:enumeration value="Moderate" />
+          <xs:enumeration value="Strict" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:complexType name="ArrayOfSearchOption">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="SearchOption" type="tns:SearchOption" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="SearchOption">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="DisableLocationDetection" />
+          <xs:enumeration value="EnableHighlighting" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:complexType name="ArrayOfSourceType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="SourceType" type="tns:SourceType" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="SourceType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Spell" />
+          <xs:enumeration value="Web" />
+          <xs:enumeration value="Image" />
+          <xs:enumeration value="RelatedSearch" />
+          <xs:enumeration value="Phonebook" />
+          <xs:enumeration value="Showtimes" />
+          <xs:enumeration value="Weather" />
+          <xs:enumeration value="Video" />
+          <xs:enumeration value="Ad" />
+          <xs:enumeration value="XRank" />
+          <xs:enumeration value="InstantAnswer" />
+          <xs:enumeration value="News" />
+          <xs:enumeration value="QueryLocation" />
+          <xs:enumeration value="MobileWeb" />
+          <xs:enumeration value="Translation" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:complexType name="WebRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Offset" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Count" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="FileType" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Options" type="tns:ArrayOfWebSearchOption" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SearchTags" type="tns:ArrayOfString" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfWebSearchOption">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="WebSearchOption" type="tns:WebSearchOption" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="WebSearchOption">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="DisableHostCollapsing" />
+          <xs:enumeration value="DisableQueryAlterations" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:complexType name="ArrayOfString">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="string" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ImageRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Offset" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Count" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Filters" type="tns:ArrayOfString" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PhonebookRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Offset" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Count" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="FileType" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SortBy" type="tns:PhonebookSortOption" />
+          <xs:element minOccurs="0" maxOccurs="1" name="LocId" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Category" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="PhonebookSortOption">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Default" />
+          <xs:enumeration value="Relevance" />
+          <xs:enumeration value="Distance" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:complexType name="VideoRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Offset" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Count" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Filters" type="tns:ArrayOfString" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SortBy" type="tns:VideoSortOption" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="VideoSortOption">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Relevance" />
+          <xs:enumeration value="Date" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:complexType name="NewsRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Offset" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Count" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="LocationOverride" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Category" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SortBy" type="tns:NewsSortOption" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="NewsSortOption">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Relevance" />
+          <xs:enumeration value="Date" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:complexType name="MobileWebRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Offset" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Count" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Options" type="tns:ArrayOfMobileWebSearchOption" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfMobileWebSearchOption">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="MobileWebSearchOption" type="tns:MobileWebSearchOption" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="MobileWebSearchOption">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="DisableHostCollapsing" />
+          <xs:enumeration value="DisableQueryAlterations" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:complexType name="TranslationRequest">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="SourceLanguage" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TargetLanguage" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SearchResponse">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="Version" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Query" type="tns:Query" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Spell" type="tns:SpellResponse" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Web" type="tns:WebResponse" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Image" type="tns:ImageResponse" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RelatedSearch" type="tns:RelatedSearchResponse" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Phonebook" type="tns:PhonebookResponse" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Video" type="tns:VideoResponse" />
+          <xs:element minOccurs="0" maxOccurs="1" name="InstantAnswer" type="tns:InstantAnswerResponse" />
+          <xs:element minOccurs="0" maxOccurs="1" name="News" type="tns:NewsResponse" />
+          <xs:element minOccurs="0" maxOccurs="1" name="MobileWeb" type="tns:MobileWebResponse" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Translation" type="tns:TranslationResponse" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Errors" type="tns:ArrayOfError" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Query">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="SearchTerms" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AlteredQuery" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AlterationOverrideQuery" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SpellResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Total" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Results" type="tns:ArrayOfSpellResult" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfSpellResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="SpellResult" type="tns:SpellResult" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SpellResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Value" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WebResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Total" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Offset" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Results" type="tns:ArrayOfWebResult" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfWebResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="WebResult" type="tns:WebResult" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WebResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Title" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Description" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Url" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CacheUrl" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayUrl" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DateTime" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SearchTags" type="tns:ArrayOfWebSearchTag" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DeepLinks" type="tns:ArrayOfDeepLink" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfWebSearchTag">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="WebSearchTag" type="tns:WebSearchTag" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WebSearchTag">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Value" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfDeepLink">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="DeepLink" type="tns:DeepLink" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DeepLink">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Title" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Url" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ImageResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Total" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Offset" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Results" type="tns:ArrayOfImageResult" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfImageResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="ImageResult" type="tns:ImageResult" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ImageResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Title" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="MediaUrl" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Url" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayUrl" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Width" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Height" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="FileSize" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ContentType" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Thumbnail" type="tns:Thumbnail" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Thumbnail">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Url" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ContentType" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Width" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Height" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="FileSize" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RunTime" type="xs:unsignedInt" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="RelatedSearchResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Results" type="tns:ArrayOfRelatedSearchResult" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfRelatedSearchResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="RelatedSearchResult" type="tns:RelatedSearchResult" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="RelatedSearchResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Title" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Url" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PhonebookResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Total" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Offset" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="LocalSerpUrl" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Title" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Results" type="tns:ArrayOfPhonebookResult" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfPhonebookResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="PhonebookResult" type="tns:PhonebookResult" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PhonebookResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Title" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Url" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Business" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Address" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="City" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="StateOrProvince" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CountryOrRegion" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PostalCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Latitude" type="xs:double" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Longitude" type="xs:double" />
+          <xs:element minOccurs="0" maxOccurs="1" name="UniqueId" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="BusinessUrl" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="UserRating" type="xs:double" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ReviewCount" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayUrl" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="VideoResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Total" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Offset" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Results" type="tns:ArrayOfVideoResult" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfVideoResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="VideoResult" type="tns:VideoResult" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="VideoResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Title" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PlayUrl" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SourceTitle" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RunTime" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ClickThroughPageUrl" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="StaticThumbnail" type="tns:Thumbnail" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="InstantAnswerResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Results" type="tns:ArrayOfInstantAnswerResult" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfInstantAnswerResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="InstantAnswerResult" type="tns:InstantAnswerResult" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="InstantAnswerResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="ContentType" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Title" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ClickThroughUrl" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Url" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Attribution" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="InstantAnswerSpecificData" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="NewsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Total" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Offset" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RelatedSearches" type="tns:ArrayOfNewsRelatedSearch" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Results" type="tns:ArrayOfNewsResult" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfNewsRelatedSearch">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="NewsRelatedSearch" type="tns:NewsRelatedSearch" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="NewsRelatedSearch">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Title" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Url" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfNewsResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="NewsResult" type="tns:NewsResult" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="NewsResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Title" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Url" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Source" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Snippet" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Date" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="BreakingNews" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="NewsCollections" type="tns:ArrayOfNewsCollection" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfNewsCollection">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="NewsCollection" type="tns:NewsCollection" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="NewsCollection">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="NewsArticles" type="tns:ArrayOfNewsArticle" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfNewsArticle">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="NewsArticle" type="tns:NewsArticle" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="NewsArticle">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Title" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Url" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Source" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Snippet" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Date" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="MobileWebResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Total" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Offset" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Results" type="tns:ArrayOfMobileWebResult" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfMobileWebResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="MobileWebResult" type="tns:MobileWebResult" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="MobileWebResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Title" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Description" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Url" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayUrl" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DateTime" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TranslationResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Results" type="tns:ArrayOfTranslationResult" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfTranslationResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TranslationResult" type="tns:TranslationResult" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TranslationResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="TranslatedTerm" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfError">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="Error" type="tns:Error" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Error">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Code" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Message" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Parameter" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Value" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="HelpUrl" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SourceType" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SourceTypeErrorCode" type="xs:unsignedInt" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="SearchRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="parameters" type="tns:SearchRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SearchResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="parameters" type="tns:SearchResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </types>
+  <message name="SearchRequestMessage">
+    <part name="parameters" element="tns:SearchRequest" />
+  </message>
+  <message name="SearchResponseMessage">
+    <part name="parameters" element="tns:SearchResponse" />
+  </message>
+  <portType name="BingPortType">
+    <operation name="Search">
+      <input wsa:Action="http://schemas.microsoft.com/LiveSearch/2008/03/Search/BingPortType/SearchRequest" message="tns:SearchRequestMessage" />
+      <output wsa:Action="http://schemas.microsoft.com/LiveSearch/2008/03/Search/BingPortType/SearchResponse" message="tns:SearchResponseMessage" />
+    </operation>
+  </portType>
+  <binding name="BingPortBinding" type="tns:BingPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="Search">
+      <soap:operation soapAction="http://schemas.microsoft.com/LiveSearch/2008/03/Search/Search" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="BingService">
+    <port name="BingPort" binding="tns:BingPortBinding">
+      <soap:address location="http://api.bing.net:80/soap.asmx" />
+    </port>
+  </service>
+</definitions>

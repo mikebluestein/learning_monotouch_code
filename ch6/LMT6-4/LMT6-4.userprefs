@@ -1,0 +1,24 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="LMT6-4/AnimationDemoViewController.xib.cs">
+    <Files>
+      <File FileName="LMT6-4/Main.cs" Line="22" Column="3" />
+      <File FileName="LMT6-4/AnimationDemoViewController.xib.cs" Line="6" Column="29" />
+      <File FileName="LMT6-4/AnimationDemoViewController.xib.designer.cs" Line="62" Column="1" />
+      <File FileName="LMT6-4/MainWindow.xib.designer.cs" Line="48" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="LMT6-4" expanded="True" selected="True">
+            <Node name="AnimationDemoViewController.xib" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

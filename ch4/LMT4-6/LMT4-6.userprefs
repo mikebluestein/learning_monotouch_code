@@ -1,0 +1,30 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|iPhoneSimulator" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="LMT4-6/DemoADIPhone.xib.cs">
+    <Files>
+      <File FileName="LMT4-6/DemoADIPhone.xib.cs" Line="61" Column="15" />
+      <File FileName="LMT4-6/DemoADIPad.xib.cs" Line="76" Column="1" />
+      <File FileName="LMT4-6/DemoADIPhone.xib.designer.cs" Line="39" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="LMT4-6" expanded="True">
+            <Node name="DemoADIPad.xib" expanded="True" />
+            <Node name="DemoADIPhone.xib" expanded="True">
+              <Node name="DemoADIPhone.xib.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.LMT4-6>
+    <IPhoneSimulatorTarget-Debug_27CiPhoneSimulator Device="IPad" SdkVersion="4.2" />
+    <IPhoneSimulatorTarget-Release_27CiPhoneSimulator Device="IPad" SdkVersion="4.2" />
+  </MonoDevelop.Ide.ItemProperties.LMT4-6>
+</Properties>

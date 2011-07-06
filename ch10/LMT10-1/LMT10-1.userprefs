@@ -1,0 +1,24 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|iPhone" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="LMT10-1/ChatController.xib.cs">
+    <Files>
+      <File FileName="LMT10-1/ChatController.xib.cs" Line="43" Column="10" />
+      <File FileName="LMT10-1/Main.cs" Line="39" Column="1" />
+      <File FileName="LMT10-1/ChatController.xib.designer.cs" Line="90" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="LMT10-1" expanded="True" selected="True">
+            <Node name="ChatController.xib" expanded="True" />
+            <Node name="MainWindow.xib" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

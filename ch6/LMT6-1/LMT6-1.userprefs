@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="LMT1-1/StarView.cs">
+    <Files>
+      <File FileName="LMT1-1/Main.cs" Line="28" Column="32" />
+      <File FileName="LMT1-1/StarViewController.xib.cs" Line="6" Column="23" />
+      <File FileName="LMT1-1/StarView.cs" Line="100" Column="14" />
+      <File FileName="LMT1-1/MainWindow.xib.designer.cs" Line="48" Column="1" />
+      <File FileName="LMT1-1/StarViewController.xib.designer.cs" Line="34" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

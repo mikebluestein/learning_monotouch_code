@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicDemo", "MusicDemo\MusicDemo.csproj", "{C8016C55-464E-454B-8779-65D2A018E498}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C8016C55-464E-454B-8779-65D2A018E498}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{C8016C55-464E-454B-8779-65D2A018E498}.Debug|iPhone.Build.0 = Debug|iPhone
+		{C8016C55-464E-454B-8779-65D2A018E498}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{C8016C55-464E-454B-8779-65D2A018E498}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{C8016C55-464E-454B-8779-65D2A018E498}.Release|iPhone.ActiveCfg = Release|iPhone
+		{C8016C55-464E-454B-8779-65D2A018E498}.Release|iPhone.Build.0 = Release|iPhone
+		{C8016C55-464E-454B-8779-65D2A018E498}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{C8016C55-464E-454B-8779-65D2A018E498}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = MusicDemo\MusicDemo.csproj
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,25 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|iPhoneSimulator" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MTNotes/Note.cs">
+    <Files>
+      <File FileName="MTNotes/AppDelegateIPhone.cs" Line="23" Column="13" />
+      <File FileName="MTNotes/NotesTableController.cs" Line="31" Column="15" />
+      <File FileName="MTNotes/NoteDetailController.xib.cs" Line="52" Column="14" />
+      <File FileName="MTNotes/Note.cs" Line="60" Column="14" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="MTNotes" expanded="True" selected="True">
+            <Node name="Settings.bundle" expanded="True" />
+            <Node name="NoteDetailController.xib" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
