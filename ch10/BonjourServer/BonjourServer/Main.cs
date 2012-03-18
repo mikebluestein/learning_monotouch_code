@@ -1,4 +1,3 @@
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,8 +35,9 @@ namespace BonjourServer
             _ns.Delegate = _netDel;
             
             //BUG: monotouch 3.3.1 has TXTRecordData incorrectly bound to a bool. will be fixed in v.Next
-            //string message = "some message about the service...";     
-            //_ns.TxtRecordData = NSData.FromString(message);
+            //var dictionary = NSDictionary.FromObjectAndKey (new NSString("some message about the service..."), new NSString ("someKey"));
+            //var record = NSNetService.DataFromTxtRecord (dictionary);
+            //_ns.TxtRecordData = record;
             
             _ns.Publish ();
             
